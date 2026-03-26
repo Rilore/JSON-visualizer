@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.3)
+cmake_minimum_required(VERSION 3.28.3)
 
 project(json-visiualizer VERSION 0.1 LANGUAGES CXX)
 
@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(GTest REQUIRED)
 
 add_subdirectory(3dparty/json)
 add_subdirectory(src/app)
@@ -33,4 +34,9 @@ install(TARGETS json-visiualizer
 )
 
 add_executable(test_json-visualize test/main_test.cpp)
-target_link_libraries(test_json-visualize PRIVATE Qt${QT_VERSION_MAJOR}::Widgets gtest gtest_main nlohmann_json::nlohmann_json)
+target_link_libraries(test_json-visualize PRIVATE
+    Qt${QT_VERSION_MAJOR}::Widgets
+    GTest::gtest
+    GTest::gtest_main
+    nlohmann_json::nlohmann_json
+)
