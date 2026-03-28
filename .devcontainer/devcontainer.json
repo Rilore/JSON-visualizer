@@ -47,7 +47,8 @@
                 "vadimcn.vscode-lldb",
                 "wayou.vscode-todo-highlight",
                 "theqtcompany.qt-core",
-				"PKief.material-icon-theme"	//because in standart vscode theme you cannot find CMakeLists.txt icon                "go2sh.cmake-integration-vscode",
+                "go2sh.cmake-integration-vscode",
+                "PKief.material-icon-theme"	//because in standart vscode theme you cannot find CMakeLists.txt icon
             ]
         }
     }
