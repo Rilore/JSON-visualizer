@@ -30,16 +30,13 @@
                 "clangd.arguments": [
                     "--background-index",
                     "--compile-commands-dir=build",
-                    "-j=4",
+                    "-j=16",
                     "--clang-tidy",
                     "--header-insertion=never"
                 ],
                 "cmake.configureOnOpen": true,
                 "cmake.buildDirectory": "build",
                 "cmake.generator": "Ninja",
-                "qtTools.qtPaths": ["/usr/lib/qt6"],
-                "qtTools.qtInstallations": ["6.4.2"],
-                "qtTools.designerPath": "/usr/bin/designer6",
                 "files.associations": {
                     "*.h": "cpp",
                     "*.hpp": "cpp"
@@ -47,11 +44,10 @@
             },
             "extensions": [
                 "llvm-vs-code-extensions.vscode-clangd",
-                "ms-vscode.cmake-tools",
-                "theqtcompany.qt",
                 "vadimcn.vscode-lldb",
                 "wayou.vscode-todo-highlight",
-				"PKief.material-icon-theme"	//because in standart vscode theme you cannot find CMakeLists.txt icon
+                "theqtcompany.qt-core",
+				"PKief.material-icon-theme"	//because in standart vscode theme you cannot find CMakeLists.txt icon                "go2sh.cmake-integration-vscode",
             ]
         }
     }
