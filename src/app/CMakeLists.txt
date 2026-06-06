@@ -1,7 +1,7 @@
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 
-qt_add_executable(json-visiualizer
+qt_add_executable(json-visualizer
     mainwindow.ui
     mainwindow.cpp
     main.cpp

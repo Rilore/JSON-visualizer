@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28.3)
 
-project(json-visiualizer VERSION 0.1 LANGUAGES CXX)
+project(json-visualizer VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,7 +14,7 @@ add_subdirectory(src/app)
 
 qt_standard_project_setup()
 
-target_link_libraries(json-visiualizer PRIVATE
+target_link_libraries(json-visualizer PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     nlohmann_json::nlohmann_json
 )
@@ -27,7 +27,7 @@ set_target_properties(json-visiualizer PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS json-visiualizer
+install(TARGETS json-visualizer
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
